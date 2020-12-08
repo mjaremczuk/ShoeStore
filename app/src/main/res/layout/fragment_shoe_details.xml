@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+    <!--
+        Using ConstraintLayout as a first idea but either LinearLayout or ConstraintLayout
+        could be used. Main idea was to make buttons always visible at the bottom and fields
+        to make scrollable whenever there is not enough space
+    -->
     <data>
 
         <variable

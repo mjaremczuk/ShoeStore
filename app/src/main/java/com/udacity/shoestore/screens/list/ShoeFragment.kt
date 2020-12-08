@@ -20,24 +20,20 @@ class ShoeFragment : Fragment() {
     private val viewModel: ShoeViewModel by activityViewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
-        _binding = DataBindingUtil.inflate(
-            inflater,
-            R.layout.fragment_shoes,
-            container,
-            false
-        )
+        _binding = FragmentShoesBinding.inflate(inflater, container, false)
+
         setHasOptionsMenu(true)
 
         viewModel.shoes.observe(viewLifecycleOwner) {
             it.forEachIndexed { index, shoe ->
                 val item = DataBindingUtil.inflate<ShoeItemBinding>(
-                    inflater,
-                    R.layout.shoe_item,
-                    container,
-                    false
+                        inflater,
+                        R.layout.shoe_item,
+                        container,
+                        false
                 )
                 item.shoe = shoe
                 item.root.id = index

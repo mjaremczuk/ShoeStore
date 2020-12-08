@@ -4,10 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {
@@ -16,20 +14,15 @@ class WelcomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
-        _binding = DataBindingUtil.inflate(
-            inflater,
-            R.layout.fragment_welcome,
-            container,
-            false
-        )
+        _binding = FragmentWelcomeBinding.inflate(inflater, container, false)
 
         binding.welcomeContinueButton.setOnClickListener {
             findNavController().navigate(
-                WelcomeFragmentDirections.toOnboarding()
+                    WelcomeFragmentDirections.toOnboarding()
             )
         }
         return binding.root
