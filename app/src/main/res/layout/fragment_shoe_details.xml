@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="shoeViewModel"
+            type="com.udacity.shoestore.screens.ShoeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="@+id/details_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/shoe_name" />
+
+                    <EditText
+                        android:id="@+id/details_name_field"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="@={shoeViewModel.name}">
+
+                        <requestFocus />
+                    </EditText>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/shoe_company" />
+
+                    <EditText
+                        android:id="@+id/details_company_field"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="@={shoeViewModel.company}" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/shoe_size" />
+
+                    <EditText
+                        android:id="@+id/details_size_field"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:text="@={shoeViewModel.size}" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/shoe_description" />
+
+                    <EditText
+                        android:id="@+id/details_description_field"
+                        android:layout_weight="1"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:text="@={shoeViewModel.description}" />
+                </TableRow>
+            </TableLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/details_save"
+            style="@style/PrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_shoe"
+            app:layout_constraintBottom_toTopOf="@+id/details_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/details_cancel"
+            style="@style/BorderlessButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/cancel_shoe"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
