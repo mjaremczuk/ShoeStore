@@ -33,7 +33,7 @@
         android:label="Welcome!"
         tools:layout="@layout/fragment_welcome">
         <action
-            android:id="@+id/action_welcomeFragment_to_onboardingFragment"
+            android:id="@+id/toOnboarding"
             app:destination="@id/onboardingFragment"
             app:popUpTo="@id/welcomeFragment"
             app:popUpToInclusive="true" />
@@ -41,7 +41,7 @@
     <fragment
         android:id="@+id/onboardingFragment"
         android:name="com.udacity.shoestore.screens.onboarding.OnboardingFragment"
-        android:label="On Boarding"
+        android:label="Explore store"
         tools:layout="@layout/fragment_onboarding">
         <action
             android:id="@+id/showShoesList"

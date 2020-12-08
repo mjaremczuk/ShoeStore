@@ -12,14 +12,14 @@
     <string name="login_password">Password</string>
     <string name="sign_up">Sign up</string>
     <string name="sign_in">Sign in</string>
-    <string name="onboarding_header">This is a on boarding to Shoe store</string>
-    <string name="onboarding_description">You can browse list of the shoes and create new one</string>
+    <string name="onboarding_header">Enjoy shoe store!</string>
+    <string name="onboarding_description">Thanks to Shoe store you can easily browse available shoes or even create new one which will be immediately visible on shoe list</string>
     <string name="got_it">Got it</string>
     <string name="welcome_header">Welcome in Shoe store</string>
     <string name="welcome_description">This is a place where you can browse list of the shoes and add new ones</string>
     <string name="let_me_in">Let me in</string>
-    <string name="shoe_size_number">Shoe size: %.2f</string>
-    <string name="shoe_name_item">Name: %s</string>
-    <string name="shoe_company_item">Company: %s</string>
-    <string name="shoe_description_item">Description: %s</string>
+    <string name="shoe_size_number">Size: %.2f</string>
+    <string name="shoe_name_item">%s</string>
+    <string name="shoe_company_item">%s</string>
+    <string name="shoe_description_item">Description:\n%s</string>
 </resources>

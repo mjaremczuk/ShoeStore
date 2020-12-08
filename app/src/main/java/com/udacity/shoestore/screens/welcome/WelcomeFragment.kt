@@ -29,7 +29,7 @@ class WelcomeFragment : Fragment() {
 
         binding.welcomeContinueButton.setOnClickListener {
             findNavController().navigate(
-                WelcomeFragmentDirections.actionWelcomeFragmentToOnboardingFragment()
+                WelcomeFragmentDirections.toOnboarding()
             )
         }
         return binding.root
